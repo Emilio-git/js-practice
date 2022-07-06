@@ -1,19 +1,4 @@
-/* Задание на урок:
-
-1) Первую часть задания повторить по уроку
-
-2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
-false - выводит в консоль главный объект программы
-
-3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
-"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
-genres
-
-P.S. Функции вызывать не обязательно*/
-
 'use strict';
-
-// Первая часть задания
 
 let numberOfFilms;
 
@@ -35,10 +20,11 @@ const personalMovieDB = {
    privat: false,
 };
 
+// Внесен метод .trim() для строк после урока
 
 function rememberMyFilms () {
     for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?');
+        const a = prompt('Один из последних просмотренных фильмов?').trim();
         const b = prompt('На сколько оцените его?');
         
         if (a != null && b != null && a != "" && b != "" && a.length <= 50) {
@@ -65,8 +51,6 @@ function detectPersonalLevel() {
 
 detectPersonalLevel();
 
-// Вторая часть задания
-
 function showMyDB (hidden) {
     if (!hidden) {
         console.log (personalMovieDB);
@@ -74,8 +58,6 @@ function showMyDB (hidden) {
 }
 
 showMyDB (personalMovieDB.privat);
-
-// Третья часть задания
 
 function writeYourGenres () {
     for (let i = 1; i <= 3; i++) {

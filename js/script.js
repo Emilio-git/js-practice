@@ -80,3 +80,38 @@ const personalMovieDB = {
         });
     },
 };
+
+// Урок 39 - Методы взаимодействия с DOM (Document Object Model) используя объект document
+
+// Присваивание box элемент из html по id
+const box = document.getElementById('box');
+
+console.log(box);
+
+// Присваивание btns все элементы с тегами button на html страничке
+const btns = document.getElementsByTagName('button');
+
+// Вывод коллекции полностью
+console.log(btns);
+console.log('hello');
+// Вывод второго элемента из коллекции (псевдомассива) btns
+console.log(btns[1]);
+
+// Присваивание !коллекции! элементов по селектору .text из html к переменной text
+const text = document.querySelectorAll('.text');
+
+// Работа c коллекцией и изменение стилей у каждого элемента коллекции text
+text.forEach(item => {
+    item.style.backgroundColor = "red";
+});
+
+// Второй способ работы с коллекцией используя цикл
+for (let i = 0; i < text.length; i++) {
+    text[i].style.fontSize = '30px';
+}
+
+text[1].style.color = "white";
+
+console.dir(text);
+
+text.style.cssText = "background-color: black;";

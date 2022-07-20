@@ -81,7 +81,7 @@ const personalMovieDB = {
     },
 };
 
-// Урок 39 - Методы взаимодействия с DOM (Document Object Model) используя объект document
+// Урок 39 и 40 - Методы взаимодействия с DOM (Document Object Model) используя объект document
 
 // Присваивание box элемент из html по id
 const box = document.getElementById('box');
@@ -114,4 +114,12 @@ text[1].style.color = "white";
 
 console.dir(text);
 
-text.style.cssText = "background-color: black;";
+const div = document.createElement('div');
+
+div.classList.add('block');
+
+console.log(document.querySelector('.second'));
+
+// document.querySelector('.second').append(div);
+
+document.querySelector('.second').prepend(div);
